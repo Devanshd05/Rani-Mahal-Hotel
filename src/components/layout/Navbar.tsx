@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Menu, Crown, Phone } from 'lucide-react';
 import { navItems } from '../../data/navigation';
 import { hotelData } from '../../data/hotel';
@@ -9,8 +9,7 @@ import { MobileMenu } from './MobileMenu';
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,12 +28,10 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
+        className={`sticky top-0 z-40 w-full transition-all duration-300 bg-[#252824]/95 backdrop-blur-md border-b border-[#C89A5B]/25 ${
           isScrolled
-            ? 'bg-[#252824]/95 backdrop-blur-md shadow-lg border-b border-[#C89A5B]/25 py-2.5 sm:py-3.5'
-            : isHomePage
-            ? 'bg-gradient-to-b from-black/85 via-black/45 to-transparent py-3 sm:py-5'
-            : 'bg-[#252824] border-b border-[#C89A5B]/25 py-3 sm:py-4'
+            ? 'py-2.5 sm:py-3 shadow-lg'
+            : 'py-3 sm:py-3.5 shadow-md'
         }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between">
