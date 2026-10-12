@@ -38,7 +38,7 @@ export const AboutPage: React.FC = () => {
   return (
     <div className="pt-8 pb-20">
       {/* Editorial Banner */}
-      <div className="relative py-24 md:py-32 bg-[#252824] text-white overflow-hidden mb-16">
+      <div className="relative py-14 sm:py-20 md:py-28 bg-[#252824] text-white overflow-hidden mb-10 sm:mb-16">
         <img
           src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=80"
           alt="Rani Mahal Hotel Architectural Archways"
@@ -47,14 +47,14 @@ export const AboutPage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-[#1e211d] via-[#1e211d]/70 to-transparent" />
 
         <Container className="relative z-10 text-center">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#C69A63] font-semibold mb-3 block">
+          <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#C89A5B] font-semibold mb-2 sm:mb-3 block">
             Our Legacy & Story
           </span>
-          <h1 className="font-serif text-4xl sm:text-6xl text-white font-normal mb-6">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl text-white font-normal mb-3 sm:mb-4 leading-tight">
             The Legend of {hotelData.name}
           </h1>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/80 leading-relaxed font-light">
-            A sanctuary where royal lineage, handcrafted Rajputana artistry, and genuine warmth intertwine to create memories of a lifetime.
+          <p className="max-w-2xl mx-auto text-xs sm:text-base text-white/80 leading-relaxed font-light">
+            A sanctuary where royal lineage, handcrafted artistry, and genuine Agra warmth intertwine to create memories of a lifetime.
           </p>
         </Container>
       </div>
@@ -104,22 +104,22 @@ export const AboutPage: React.FC = () => {
         </div>
 
         {/* Heritage Timeline */}
-        <div className="mb-24 bg-white p-8 sm:p-14 border border-[#E9E1D5] shadow-sm">
+        <div className="mb-14 sm:mb-24 bg-white p-5 sm:p-10 md:p-14 border border-[#EBE3D7] shadow-sm rounded-xs">
           <SectionHeading
             eyebrow="Chronicle"
             title="Through the Corridors of Time"
             subtitle="Key chapters in the evolution of our royal residence."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {milestones.map((m, i) => (
-              <div key={i} className="border-t-2 border-[#C69A63] pt-5">
-                <span className="font-serif text-3xl text-[#C69A63] font-normal block mb-1">
+              <div key={i} className="border-t-2 border-[#C89A5B] pt-4 sm:pt-5">
+                <span className="font-serif text-2xl sm:text-3xl text-[#C89A5B] font-normal block mb-1">
                   {m.year}
                 </span>
-                <h4 className="text-sm font-semibold uppercase tracking-wider text-[#252824] mb-2">
+                <h4 className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#222222] mb-1.5">
                   {m.title}
                 </h4>
-                <p className="text-xs text-[#686868] leading-relaxed">
+                <p className="text-xs text-[#77736D] leading-relaxed">
                   {m.desc}
                 </p>
               </div>

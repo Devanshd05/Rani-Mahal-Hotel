@@ -10,16 +10,16 @@ export const GalleryPage: React.FC = () => {
   return (
     <div className="pt-8 pb-20 bg-[#1f221e]">
       {/* Banner */}
-      <div className="relative py-24 md:py-28 bg-[#1f221e] text-white overflow-hidden">
+      <div className="relative py-14 sm:py-20 md:py-28 bg-[#1f221e] text-white overflow-hidden">
         <Container className="relative z-10 text-center">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#C69A63] font-semibold mb-3 block">
+          <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#C89A5B] font-semibold mb-2 sm:mb-3 block">
             Palace Visual Archives
           </span>
-          <h1 className="font-serif text-4xl sm:text-6xl text-white font-normal mb-4">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl text-white font-normal mb-3 sm:mb-4 leading-tight">
             The Gallery of Rani Mahal
           </h1>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/80 leading-relaxed font-light">
-            Take a visual tour through our suites, starlit courtyards, grand banquets, and dining experiences. Click any photograph to enlarge in high resolution.
+          <p className="max-w-2xl mx-auto text-xs sm:text-base text-white/80 leading-relaxed font-light">
+            Take a visual tour through our suites, starlit courtyards, grand banquets, and dining experiences in Agra. Tap any photograph to enlarge in full view.
           </p>
         </Container>
       </div>

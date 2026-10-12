@@ -16,21 +16,21 @@ export const AmenitiesSection: React.FC = () => {
   return (
     <section
       id="amenities-strip"
-      className="bg-[#1f221e] text-white border-y border-[#C69A63]/30 py-8 md:py-10 shadow-inner"
+      className="bg-[#1f221e] text-white border-y border-[#C89A5B]/25 py-8 sm:py-10 shadow-inner"
     >
       <Container>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 items-center justify-between text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-6 lg:gap-8 items-stretch justify-items-stretch text-center">
           {amenitiesData.map((item) => {
             const IconComponent = iconMap[item.iconName] || Bell;
             return (
               <div
                 key={item.id}
-                className="group flex flex-col items-center justify-center p-3 rounded-sm transition-all duration-300 hover:bg-white/[0.03]"
+                className="group flex flex-col items-center justify-center p-3 sm:p-3.5 rounded-sm transition-all duration-300 hover:bg-white/[0.04] border border-white/5 sm:border-transparent"
               >
-                <div className="w-11 h-11 rounded-full border border-[#C69A63]/40 flex items-center justify-center text-[#C69A63] mb-3 group-hover:border-[#C69A63] group-hover:scale-105 transition-all duration-300">
-                  <IconComponent className="w-5 h-5 stroke-[1.5]" />
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-[#C89A5B]/40 flex items-center justify-center text-[#C89A5B] mb-2.5 sm:mb-3 group-hover:border-[#C89A5B] group-hover:scale-105 transition-all duration-300 shrink-0">
+                  <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 stroke-[1.6]" />
                 </div>
-                <h3 className="text-xs uppercase tracking-[0.2em] font-medium text-white/90 group-hover:text-[#C69A63] transition-colors">
+                <h3 className="text-[11px] sm:text-xs uppercase tracking-[0.14em] font-medium text-white/90 group-hover:text-[#C89A5B] transition-colors leading-tight">
                   {item.title}
                 </h3>
                 {item.description && (

@@ -72,11 +72,10 @@ export const ContactSection: React.FC = () => {
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate luxury booking dispatch
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 800);
+    }, 700);
   };
 
   const handleChange = (
@@ -94,7 +93,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="enquiry" className="py-20 md:py-28 bg-[#F7F4EE]">
+    <section id="enquiry" className="py-14 sm:py-20 md:py-28 bg-[#F8F6F1]">
       <Container size="narrow">
         <SectionHeading
           eyebrow="Direct Concierge"
@@ -102,27 +101,27 @@ export const ContactSection: React.FC = () => {
           subtitle="Submit your itinerary or celebration requirements. Our reservation concierge will respond promptly within 2 business hours."
         />
 
-        <div className="bg-white border border-[#E9E1D5] shadow-xl p-8 sm:p-12 relative overflow-hidden">
+        <div className="bg-white border border-[#EBE3D7] shadow-xl p-5 sm:p-8 md:p-12 relative overflow-hidden rounded-xs">
           {/* Subtle gold top border accent */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#252824] via-[#C69A63] to-[#252824]" />
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#252824] via-[#C89A5B] to-[#252824]" />
 
           {isSubmitted ? (
-            <div className="py-12 text-center space-y-5 animate-in fade-in duration-300">
-              <div className="w-16 h-16 rounded-full bg-[#F7F4EE] border border-[#C69A63] mx-auto flex items-center justify-center text-[#C69A63]">
-                <CheckCircle2 className="w-8 h-8" />
+            <div className="py-8 sm:py-12 text-center space-y-4 sm:space-y-5 animate-in fade-in duration-300">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#F8F6F1] border border-[#C89A5B] mx-auto flex items-center justify-center text-[#C89A5B]">
+                <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
               </div>
 
-              <h3 className="font-serif text-3xl font-normal text-[#252824]">
+              <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#222222]">
                 Reservation Request Received
               </h3>
 
-              <p className="text-sm text-[#686868] max-w-lg mx-auto leading-relaxed">
-                Thank you, <strong className="text-[#252824]">{formData.name}</strong>. Your enquiry for{' '}
-                <span className="text-[#C69A63] font-medium">{formData.enquiryType.toUpperCase()}</span> has been dispatched to the front office concierge team. We will contact you at{' '}
-                <span className="font-medium text-[#252824]">{formData.email}</span>.
+              <p className="text-xs sm:text-sm text-[#77736D] max-w-lg mx-auto leading-relaxed">
+                Thank you, <strong className="text-[#222222]">{formData.name}</strong>. Your enquiry for{' '}
+                <span className="text-[#C89A5B] font-medium">{formData.enquiryType.toUpperCase()}</span> has been dispatched to the front office concierge team. We will contact you at{' '}
+                <span className="font-medium text-[#222222]">{formData.email}</span>.
               </p>
 
-              <div className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5">
                 <Button
                   onClick={() => {
                     setIsSubmitted(false);
@@ -140,6 +139,7 @@ export const ContactSection: React.FC = () => {
                   }}
                   variant="outline"
                   size="md"
+                  className="w-full sm:w-auto min-h-[46px]"
                 >
                   Submit Another Enquiry
                 </Button>
@@ -151,7 +151,7 @@ export const ContactSection: React.FC = () => {
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#25D366] text-white text-xs uppercase tracking-wider font-semibold hover:bg-[#20ba59] transition-colors"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#25D366] text-white text-xs uppercase tracking-wider font-semibold hover:bg-[#20ba59] transition-colors min-h-[46px] w-full sm:w-auto"
                   >
                     <MessageSquare className="w-4 h-4" />
                     <span>WhatsApp Concierge Direct</span>
@@ -160,13 +160,13 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} noValidate className="space-y-6">
+            <form onSubmit={handleSubmit} noValidate className="space-y-4 sm:space-y-6">
               {/* Row 1: Name and Email */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-xs uppercase tracking-wider font-semibold text-[#252824] mb-2"
+                    className="block text-xs uppercase tracking-wider font-semibold text-[#222222] mb-1.5"
                   >
                     Your Full Name *
                   </label>
@@ -176,14 +176,14 @@ export const ContactSection: React.FC = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="e.g. Maharaja Vikramaditya"
-                    className={`w-full px-4 py-3 bg-[#F7F4EE]/50 border text-sm text-[#252824] focus:outline-none focus:ring-1 focus:ring-[#C69A63] transition-colors ${
-                      errors.name ? 'border-red-500 bg-red-50/20' : 'border-[#E9E1D5]'
+                    placeholder="e.g. Vikramaditya Sharma"
+                    className={`w-full px-3.5 py-3 bg-[#F8F6F1]/50 border text-base sm:text-sm text-[#222222] focus:outline-none focus:ring-1 focus:ring-[#C89A5B] transition-colors min-h-[46px] rounded-xs ${
+                      errors.name ? 'border-red-500 bg-red-50/20' : 'border-[#EBE3D7]'
                     }`}
                   />
                   {errors.name && (
                     <p className="mt-1 text-xs text-red-600 flex items-center gap-1">
-                      <AlertCircle className="w-3.5 h-3.5" />
+                      <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                       <span>{errors.name}</span>
                     </p>
                   )}
@@ -192,7 +192,7 @@ export const ContactSection: React.FC = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-xs uppercase tracking-wider font-semibold text-[#252824] mb-2"
+                    className="block text-xs uppercase tracking-wider font-semibold text-[#222222] mb-1.5"
                   >
                     Email Address *
                   </label>
@@ -203,13 +203,13 @@ export const ContactSection: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="yourname@domain.com"
-                    className={`w-full px-4 py-3 bg-[#F7F4EE]/50 border text-sm text-[#252824] focus:outline-none focus:ring-1 focus:ring-[#C69A63] transition-colors ${
-                      errors.email ? 'border-red-500 bg-red-50/20' : 'border-[#E9E1D5]'
+                    className={`w-full px-3.5 py-3 bg-[#F8F6F1]/50 border text-base sm:text-sm text-[#222222] focus:outline-none focus:ring-1 focus:ring-[#C89A5B] transition-colors min-h-[46px] rounded-xs ${
+                      errors.email ? 'border-red-500 bg-red-50/20' : 'border-[#EBE3D7]'
                     }`}
                   />
                   {errors.email && (
                     <p className="mt-1 text-xs text-red-600 flex items-center gap-1">
-                      <AlertCircle className="w-3.5 h-3.5" />
+                      <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                       <span>{errors.email}</span>
                     </p>
                   )}
@@ -217,11 +217,11 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Row 2: Phone & Enquiry Type */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-xs uppercase tracking-wider font-semibold text-[#252824] mb-2"
+                    className="block text-xs uppercase tracking-wider font-semibold text-[#222222] mb-1.5"
                   >
                     Telephone / WhatsApp *
                   </label>
@@ -232,13 +232,13 @@ export const ContactSection: React.FC = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 98765 43210"
-                    className={`w-full px-4 py-3 bg-[#F7F4EE]/50 border text-sm text-[#252824] focus:outline-none focus:ring-1 focus:ring-[#C69A63] transition-colors ${
-                      errors.phone ? 'border-red-500 bg-red-50/20' : 'border-[#E9E1D5]'
+                    className={`w-full px-3.5 py-3 bg-[#F8F6F1]/50 border text-base sm:text-sm text-[#222222] focus:outline-none focus:ring-1 focus:ring-[#C89A5B] transition-colors min-h-[46px] rounded-xs ${
+                      errors.phone ? 'border-red-500 bg-red-50/20' : 'border-[#EBE3D7]'
                     }`}
                   />
                   {errors.phone && (
                     <p className="mt-1 text-xs text-red-600 flex items-center gap-1">
-                      <AlertCircle className="w-3.5 h-3.5" />
+                      <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                       <span>{errors.phone}</span>
                     </p>
                   )}
@@ -247,7 +247,7 @@ export const ContactSection: React.FC = () => {
                 <div>
                   <label
                     htmlFor="enquiryType"
-                    className="block text-xs uppercase tracking-wider font-semibold text-[#252824] mb-2"
+                    className="block text-xs uppercase tracking-wider font-semibold text-[#222222] mb-1.5"
                   >
                     Nature of Enquiry
                   </label>
@@ -256,7 +256,7 @@ export const ContactSection: React.FC = () => {
                     name="enquiryType"
                     value={formData.enquiryType}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#F7F4EE]/50 border border-[#E9E1D5] text-sm text-[#252824] focus:outline-none focus:ring-1 focus:ring-[#C69A63] cursor-pointer"
+                    className="w-full px-3.5 py-3 bg-[#F8F6F1]/50 border border-[#EBE3D7] text-base sm:text-sm text-[#222222] focus:outline-none focus:ring-1 focus:ring-[#C89A5B] cursor-pointer min-h-[46px] rounded-xs"
                   >
                     <option value="room">Room & Suite Stay</option>
                     <option value="dining">Table Reservation (Shahi Dastarkhwan)</option>
@@ -268,13 +268,13 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Row 3: Dates & Guests */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                 <div>
                   <label
                     htmlFor="checkIn"
-                    className="block text-xs uppercase tracking-wider font-semibold text-[#252824] mb-2"
+                    className="block text-xs uppercase tracking-wider font-semibold text-[#222222] mb-1.5"
                   >
-                    Proposed Check-in
+                    Check-in Date
                   </label>
                   <input
                     type="date"
@@ -282,16 +282,16 @@ export const ContactSection: React.FC = () => {
                     name="checkIn"
                     value={formData.checkIn}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#F7F4EE]/50 border border-[#E9E1D5] text-sm text-[#252824] focus:outline-none focus:ring-1 focus:ring-[#C69A63]"
+                    className="w-full px-3.5 py-3 bg-[#F8F6F1]/50 border border-[#EBE3D7] text-base sm:text-sm text-[#222222] focus:outline-none focus:ring-1 focus:ring-[#C89A5B] min-h-[46px] rounded-xs"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="checkOut"
-                    className="block text-xs uppercase tracking-wider font-semibold text-[#252824] mb-2"
+                    className="block text-xs uppercase tracking-wider font-semibold text-[#222222] mb-1.5"
                   >
-                    Proposed Check-out
+                    Check-out Date
                   </label>
                   <input
                     type="date"
@@ -299,14 +299,14 @@ export const ContactSection: React.FC = () => {
                     name="checkOut"
                     value={formData.checkOut}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#F7F4EE]/50 border border-[#E9E1D5] text-sm text-[#252824] focus:outline-none focus:ring-1 focus:ring-[#C69A63]"
+                    className="w-full px-3.5 py-3 bg-[#F8F6F1]/50 border border-[#EBE3D7] text-base sm:text-sm text-[#222222] focus:outline-none focus:ring-1 focus:ring-[#C89A5B] min-h-[46px] rounded-xs"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="guests"
-                    className="block text-xs uppercase tracking-wider font-semibold text-[#252824] mb-2"
+                    className="block text-xs uppercase tracking-wider font-semibold text-[#222222] mb-1.5"
                   >
                     Guests
                   </label>
@@ -315,7 +315,7 @@ export const ContactSection: React.FC = () => {
                     name="guests"
                     value={formData.guests}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#F7F4EE]/50 border border-[#E9E1D5] text-sm text-[#252824] focus:outline-none focus:ring-1 focus:ring-[#C69A63] cursor-pointer"
+                    className="w-full px-3.5 py-3 bg-[#F8F6F1]/50 border border-[#EBE3D7] text-base sm:text-sm text-[#222222] focus:outline-none focus:ring-1 focus:ring-[#C89A5B] cursor-pointer min-h-[46px] rounded-xs"
                   >
                     <option value="1 Guest">1 Guest</option>
                     <option value="2 Guests">2 Guests</option>
@@ -330,7 +330,7 @@ export const ContactSection: React.FC = () => {
               <div>
                 <label
                   htmlFor="roomPreference"
-                  className="block text-xs uppercase tracking-wider font-semibold text-[#252824] mb-2"
+                  className="block text-xs uppercase tracking-wider font-semibold text-[#222222] mb-1.5"
                 >
                   Chamber / Suite / Venue Preference (Optional)
                 </label>
@@ -341,7 +341,7 @@ export const ContactSection: React.FC = () => {
                   value={formData.roomPreference}
                   onChange={handleChange}
                   placeholder="e.g. Maharani Royal Suite, High Floor, Early Check-in..."
-                  className="w-full px-4 py-3 bg-[#F7F4EE]/50 border border-[#E9E1D5] text-sm text-[#252824] focus:outline-none focus:ring-1 focus:ring-[#C69A63]"
+                  className="w-full px-3.5 py-3 bg-[#F8F6F1]/50 border border-[#EBE3D7] text-base sm:text-sm text-[#222222] focus:outline-none focus:ring-1 focus:ring-[#C89A5B] min-h-[46px] rounded-xs"
                 />
               </div>
 
@@ -349,34 +349,34 @@ export const ContactSection: React.FC = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-xs uppercase tracking-wider font-semibold text-[#252824] mb-2"
+                  className="block text-xs uppercase tracking-wider font-semibold text-[#222222] mb-1.5"
                 >
                   Additional Inquiries or Special Arrangements
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={4}
+                  rows={3}
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Tell us about dietary preferences, airport pickup, or anniversary celebrations..."
-                  className="w-full px-4 py-3 bg-[#F7F4EE]/50 border border-[#E9E1D5] text-sm text-[#252824] focus:outline-none focus:ring-1 focus:ring-[#C69A63]"
+                  placeholder="Tell us about arrival time, dietary requirements, or special arrangements..."
+                  className="w-full px-3.5 py-3 bg-[#F8F6F1]/50 border border-[#EBE3D7] text-base sm:text-sm text-[#222222] focus:outline-none focus:ring-1 focus:ring-[#C89A5B] rounded-xs"
                 />
               </div>
 
-              <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
                 <Button
                   type="submit"
                   variant="gold"
                   size="lg"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 min-h-[48px]"
                 >
                   <Send className="w-4 h-4" />
-                  <span>{isSubmitting ? 'Submitting Request...' : 'Transmit Enquiry'}</span>
+                  <span>{isSubmitting ? 'Transmitting Request...' : 'Transmit Enquiry'}</span>
                 </Button>
 
-                <p className="text-[11px] text-[#686868] text-center sm:text-right">
+                <p className="text-[11px] text-[#77736D] text-center sm:text-right">
                   🔒 Your details remain strictly private. No credit card required.
                 </p>
               </div>

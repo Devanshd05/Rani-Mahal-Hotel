@@ -12,7 +12,7 @@ export const RoomsPage: React.FC = () => {
   return (
     <div className="pt-8 pb-20">
       {/* Banner */}
-      <div className="relative py-20 md:py-28 bg-[#252824] text-white overflow-hidden mb-12">
+      <div className="relative py-14 sm:py-20 md:py-28 bg-[#252824] text-white overflow-hidden mb-8 sm:mb-12">
         <img
           src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=2000&q=80"
           alt="Rani Mahal Luxury Suites"
@@ -21,14 +21,14 @@ export const RoomsPage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-[#1e211d] via-[#1e211d]/75 to-transparent" />
 
         <Container className="relative z-10 text-center">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#C69A63] font-semibold mb-3 block">
+          <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#C89A5B] font-semibold mb-2 sm:mb-3 block">
             Exclusive Accommodations
           </span>
-          <h1 className="font-serif text-4xl sm:text-6xl text-white font-normal mb-4">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl text-white font-normal mb-3 sm:mb-4 leading-tight">
             Palace Chambers & Suites
           </h1>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/80 leading-relaxed font-light">
-            Individually decorated heritage sanctuaries designed for peaceful repose, adorned with traditional block prints, antique woodcraft, and serene courtyard perspectives.
+          <p className="max-w-2xl mx-auto text-xs sm:text-base text-white/80 leading-relaxed font-light">
+            Individually appointed heritage sanctuaries designed for peaceful repose in Agra, adorned with traditional accents, handcrafted woodcraft, and serene courtyard perspectives.
           </p>
         </Container>
       </div>

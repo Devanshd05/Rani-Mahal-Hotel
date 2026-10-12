@@ -12,7 +12,7 @@ export const ContactPage: React.FC = () => {
   return (
     <div className="pt-8 pb-20">
       {/* Banner */}
-      <div className="relative py-24 md:py-28 bg-[#252824] text-white overflow-hidden">
+      <div className="relative py-14 sm:py-20 md:py-28 bg-[#252824] text-white overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=2000&q=80"
           alt="Contact Rani Mahal Hotel"
@@ -21,14 +21,14 @@ export const ContactPage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-[#1e211d] via-[#1e211d]/75 to-transparent" />
 
         <Container className="relative z-10 text-center">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#C69A63] font-semibold mb-3 block">
+          <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#C89A5B] font-semibold mb-2 sm:mb-3 block">
             Direct Concierge Desk
           </span>
-          <h1 className="font-serif text-4xl sm:text-6xl text-white font-normal mb-4">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl text-white font-normal mb-3 sm:mb-4 leading-tight">
             Connect with {hotelData.name}
           </h1>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base text-white/80 leading-relaxed font-light">
-            Whether inquiring about room reservations, festive weddings, or dining bookings, our dedicated team is at your disposal 24 hours a day.
+          <p className="max-w-2xl mx-auto text-xs sm:text-base text-white/80 leading-relaxed font-light">
+            Whether inquiring about room reservations, festive weddings, or dining bookings in Agra, our dedicated team is at your disposal 24 hours a day.
           </p>
         </Container>
       </div>
