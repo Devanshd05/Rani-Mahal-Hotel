@@ -13,9 +13,9 @@ export const VenuesPage: React.FC = () => {
       {/* Banner */}
       <div className="relative py-14 sm:py-20 md:py-28 bg-[#252824] text-white overflow-hidden mb-8 sm:mb-12">
         <img
-          src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2000&q=80"
-          alt="Rani Mahal Venues and Celebrations"
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          src="/pictures/hotelbanner.png"
+          alt="Hotel Rani Mahal AC Rooms & Banquet Hall"
+          className="absolute inset-0 w-full h-full object-cover object-[center_35%] opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1e211d] via-[#1e211d]/75 to-transparent" />
 

@@ -63,9 +63,9 @@ export const HeroSection: React.FC = () => {
       {/* Responsive Architectural Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=85"
-          alt="Rani Mahal Hotel Exterior and Courtyard in Agra"
-          className="w-full h-full object-cover object-center scale-102 transition-transform duration-1000 ease-out"
+          src="/pictures/hotelbanner.png"
+          alt="Hotel Rani Mahal Exterior Facade in Agra"
+          className="w-full h-full object-cover object-[center_35%] scale-102 transition-transform duration-1000 ease-out"
           loading="eager"
           decoding="async"
         />

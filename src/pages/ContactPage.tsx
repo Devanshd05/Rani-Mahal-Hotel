@@ -14,8 +14,8 @@ export const ContactPage: React.FC = () => {
       {/* Banner */}
       <div className="relative py-14 sm:py-20 md:py-28 bg-[#252824] text-white overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=2000&q=80"
-          alt="Contact Rani Mahal Hotel"
+          src="/pictures/modern-marble-reception-lobby.png"
+          alt="Contact Hotel Rani Mahal Reception Concierge Desk"
           className="absolute inset-0 w-full h-full object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1e211d] via-[#1e211d]/75 to-transparent" />

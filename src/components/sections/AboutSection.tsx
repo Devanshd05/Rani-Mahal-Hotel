@@ -44,18 +44,18 @@ export const AboutSection: React.FC = () => {
               {/* Main Photo */}
               <div className="overflow-hidden shadow-xl relative aspect-[16/11] sm:aspect-[4/3] lg:aspect-[4/5] group rounded-xs bg-[#252824]">
                 <img
-                  src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
-                  alt="Rani Mahal Hotel Heritage Archway and Pool"
+                  src="/pictures/modern-marble-reception-lobby.png"
+                  alt="Hotel Rani Mahal Grand Marble Reception Lobby"
                   className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 text-white">
                   <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-[#dfbe8f] font-medium block">
-                    Authentic Architecture
+                    Warm Hospitality
                   </span>
                   <span className="font-serif text-lg sm:text-2xl font-normal leading-tight">
-                    The Inner Royal Courtyards & Fountains
+                    Grand Marble Reception & Royal Welcome Lobby
                   </span>
                 </div>
               </div>

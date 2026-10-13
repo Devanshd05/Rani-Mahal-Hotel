@@ -14,8 +14,8 @@ export const RoomsPage: React.FC = () => {
       {/* Banner */}
       <div className="relative py-14 sm:py-20 md:py-28 bg-[#252824] text-white overflow-hidden mb-8 sm:mb-12">
         <img
-          src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=2000&q=80"
-          alt="Rani Mahal Luxury Suites"
+          src="/pictures/warm-modern-hotel-bedroom.png"
+          alt="Hotel Rani Mahal Luxury Suites"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1e211d] via-[#1e211d]/75 to-transparent" />

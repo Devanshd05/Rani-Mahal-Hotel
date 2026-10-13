@@ -40,9 +40,9 @@ export const AboutPage: React.FC = () => {
       {/* Editorial Banner */}
       <div className="relative py-14 sm:py-20 md:py-28 bg-[#252824] text-white overflow-hidden mb-10 sm:mb-16">
         <img
-          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=80"
-          alt="Rani Mahal Hotel Architectural Archways"
-          className="absolute inset-0 w-full h-full object-cover opacity-25"
+          src="/pictures/hotelbanner.png"
+          alt="Hotel Rani Mahal Architectural Facade"
+          className="absolute inset-0 w-full h-full object-cover object-[center_35%] opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1e211d] via-[#1e211d]/70 to-transparent" />
 
@@ -88,15 +88,15 @@ export const AboutPage: React.FC = () => {
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             <div className="aspect-[3/4] overflow-hidden shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80"
-                alt="Heritage Bedroom"
+                src="/pictures/warm-modern-hotel-bedroom.png"
+                alt="Hotel Rani Mahal Master Bedroom"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="aspect-[3/4] overflow-hidden shadow-lg mt-8">
               <img
-                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
-                alt="Palace Pool"
+                src="/pictures/modern-marble-lobby-elevator.png"
+                alt="Hotel Rani Mahal Marble Elevator Lobby"
                 className="w-full h-full object-cover"
               />
             </div>

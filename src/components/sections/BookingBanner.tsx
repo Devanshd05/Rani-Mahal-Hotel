@@ -10,8 +10,8 @@ export const BookingBanner: React.FC = () => {
       {/* Background with luxury room texture */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1800&q=80"
-          alt="Luxury Hotel Room Suite"
+          src="/pictures/warm-modern-hotel-bedroom.png"
+          alt="Hotel Rani Mahal Luxury Suite"
           className="w-full h-full object-cover object-center opacity-25"
           loading="lazy"
         />
