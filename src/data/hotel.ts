@@ -2,6 +2,7 @@ import type { HotelConfig } from '../types';
 
 export const hotelData: HotelConfig = {
   name: 'Rani Mahal Hotel',
+  logoUrl: '/pictures/newlogo.png',
   tagline: 'Timeless Royal Grandeur & Heritage Hospitality',
   subTagline: 'Boutique Palace Hotel & Luxury Suites',
   description:

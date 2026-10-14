@@ -1,5 +1,3 @@
-import { Crown } from 'lucide-react';
-
 import { Container } from '../components/ui/Container';
 import { Button } from '../components/ui/Button';
 
@@ -7,8 +5,12 @@ export const NotFoundPage: React.FC = () => {
   return (
     <div className="py-28 md:py-36 bg-[#F7F4EE] text-center">
       <Container size="narrow">
-        <div className="w-16 h-16 rounded-full border border-[#C69A63] mx-auto flex items-center justify-center text-[#C69A63] mb-6">
-          <Crown className="w-8 h-8" />
+        <div className="mb-6 flex justify-center">
+          <img
+            src="/pictures/newlogo.png"
+            alt="Hotel Rani Mahal"
+            className="h-20 w-auto object-contain"
+          />
         </div>
         <span className="text-xs uppercase tracking-[0.25em] font-semibold text-[#C69A63] block mb-2">
           Error 404

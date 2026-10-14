@@ -38,24 +38,15 @@ export const Navbar: React.FC = () => {
           {/* Brand Logo */}
           <NavLink
             to="/"
-            className="group flex items-center gap-2.5 sm:gap-3.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C89A5B] rounded-sm py-0.5"
+            className="group flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C89A5B] rounded-sm py-1"
             aria-label={`${hotelData.name} - Return to Homepage`}
           >
             <img
-              src="/pictures/logo-navbar-opt.png"
-              alt="Hotel Rani Mahal Royal Crest"
-              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 shrink-0"
-              width="240"
-              height="386"
+              src={hotelData.logoUrl || '/pictures/newlogo.png'}
+              alt={hotelData.name}
+              className="h-11 sm:h-13 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 shrink-0"
             />
-            <div className="min-w-0">
-              <span className="font-serif text-lg sm:text-2xl font-normal tracking-wide text-white block leading-tight truncate">
-                {hotelData.name}
-              </span>
-              <span className="text-[8px] sm:text-[9px] tracking-[0.26em] uppercase text-[#C89A5B] block font-sans">
-                Agra Heritage
-              </span>
-            </div>
+            <span className="sr-only">{hotelData.name} - Agra Heritage</span>
           </NavLink>
 
           {/* Desktop Navigation Links */}

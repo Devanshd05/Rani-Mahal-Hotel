@@ -13,23 +13,17 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-10 sm:mb-14">
           {/* Brand info */}
           <div className="space-y-3.5 sm:space-y-4">
-            <div className="flex items-center gap-2.5 sm:gap-3.5">
+            <Link
+              to="/"
+              className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C89A5B] rounded-sm"
+              aria-label={`${hotelData.name} - Return to Homepage`}
+            >
               <img
-                src="/pictures/logo-navbar-opt.png"
-                alt="Hotel Rani Mahal Royal Crest"
-                className="h-11 sm:h-12 w-auto object-contain shrink-0"
-                width="240"
-                height="386"
+                src={hotelData.logoUrl || '/pictures/newlogo.png'}
+                alt={hotelData.name}
+                className="h-14 sm:h-16 w-auto object-contain"
               />
-              <div>
-                <span className="font-serif text-xl sm:text-2xl font-normal text-white block leading-tight">
-                  {hotelData.name}
-                </span>
-                <span className="text-[8px] sm:text-[9px] tracking-[0.25em] uppercase text-[#C89A5B] block font-sans">
-                  Agra Boutique Hotel
-                </span>
-              </div>
-            </div>
+            </Link>
             <p className="text-xs sm:text-sm text-white/60 leading-relaxed font-sans pt-1">
               {hotelData.description}
             </p>

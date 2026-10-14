@@ -1,5 +1,6 @@
 export interface HotelConfig {
   name: string;
+  logoUrl?: string;
   tagline: string;
   subTagline: string;
   description: string;

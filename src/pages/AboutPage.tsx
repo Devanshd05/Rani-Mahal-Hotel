@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Crown, Award, Heart } from 'lucide-react';
+import { Award, Heart } from 'lucide-react';
 
 
 import { hotelData } from '../data/hotel';
@@ -136,7 +136,11 @@ export const AboutPage: React.FC = () => {
           />
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div className="p-6 bg-white border border-[#E9E1D5] shadow-xs">
-              <Crown className="w-8 h-8 text-[#C69A63] mx-auto mb-4" />
+              <img
+                src="/pictures/newlogo.png"
+                alt="Rani Mahal Heritage Seal"
+                className="h-10 w-auto mx-auto mb-4 object-contain"
+              />
               <h4 className="font-serif text-xl font-normal text-[#252824] mb-2">
                 Authentic Nobility
               </h4>
