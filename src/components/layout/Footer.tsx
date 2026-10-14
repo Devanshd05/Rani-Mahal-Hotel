@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Crown, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { InstagramIcon, FacebookIcon } from '../ui/SocialIcons';
 import { hotelData } from '../../data/hotel';
 import { navItems } from '../../data/navigation';
@@ -13,15 +13,19 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-10 sm:mb-14">
           {/* Brand info */}
           <div className="space-y-3.5 sm:space-y-4">
-            <div className="flex items-center gap-2.5 sm:gap-3">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#C89A5B] flex items-center justify-center text-[#C89A5B] shrink-0">
-                <Crown className="w-5 h-5 sm:w-6 sm:h-6" />
-              </div>
+            <div className="flex items-center gap-2.5 sm:gap-3.5">
+              <img
+                src="/pictures/logo-navbar-opt.png"
+                alt="Hotel Rani Mahal Royal Crest"
+                className="h-11 sm:h-12 w-auto object-contain shrink-0"
+                width="240"
+                height="386"
+              />
               <div>
                 <span className="font-serif text-xl sm:text-2xl font-normal text-white block leading-tight">
                   {hotelData.name}
                 </span>
-                <span className="text-[9px] sm:text-[10px] tracking-[0.25em] uppercase text-[#C89A5B] block font-sans">
+                <span className="text-[8px] sm:text-[9px] tracking-[0.25em] uppercase text-[#C89A5B] block font-sans">
                   Agra Boutique Hotel
                 </span>
               </div>

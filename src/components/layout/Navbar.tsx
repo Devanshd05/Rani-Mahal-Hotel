@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, Crown, Phone } from 'lucide-react';
+import { Menu, Phone } from 'lucide-react';
 import { navItems } from '../../data/navigation';
 import { hotelData } from '../../data/hotel';
 import { Button } from '../ui/Button';
@@ -38,12 +38,16 @@ export const Navbar: React.FC = () => {
           {/* Brand Logo */}
           <NavLink
             to="/"
-            className="group flex items-center gap-2 sm:gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C89A5B] rounded-sm"
+            className="group flex items-center gap-2.5 sm:gap-3.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C89A5B] rounded-sm py-0.5"
             aria-label={`${hotelData.name} - Return to Homepage`}
           >
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-[#C89A5B] flex items-center justify-center text-[#C89A5B] group-hover:bg-[#C89A5B] group-hover:text-[#252824] transition-all duration-300 shrink-0">
-              <Crown className="w-4 h-4 sm:w-5 sm:h-5" />
-            </div>
+            <img
+              src="/pictures/logo-navbar-opt.png"
+              alt="Hotel Rani Mahal Royal Crest"
+              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 shrink-0"
+              width="240"
+              height="386"
+            />
             <div className="min-w-0">
               <span className="font-serif text-lg sm:text-2xl font-normal tracking-wide text-white block leading-tight truncate">
                 {hotelData.name}

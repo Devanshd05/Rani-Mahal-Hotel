@@ -50,13 +50,20 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
     >
       {/* Top Header */}
       <div className="flex items-center justify-between px-5 sm:px-6 py-4 border-b border-white/10 shrink-0">
-        <div>
-          <span className="font-serif text-xl sm:text-2xl tracking-wider text-[#C89A5B] block">
-            {hotelData.name}
-          </span>
-          <p className="text-[9px] sm:text-[10px] tracking-[0.25em] uppercase text-white/50">
-            Agra Heritage Experience
-          </p>
+        <div className="flex items-center gap-3">
+          <img
+            src="/pictures/logo-navbar-opt.png"
+            alt="Hotel Rani Mahal Royal Crest"
+            className="h-10 w-auto object-contain"
+          />
+          <div>
+            <span className="font-serif text-xl sm:text-2xl tracking-wider text-[#C89A5B] block">
+              {hotelData.name}
+            </span>
+            <p className="text-[9px] sm:text-[10px] tracking-[0.25em] uppercase text-white/50">
+              Agra Heritage Experience
+            </p>
+          </div>
         </div>
         <button
           ref={closeBtnRef}
